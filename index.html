@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Jasper Poppe">
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="/esimakin-twbs-pagination-a0ceda4/jquery.twbsPagination.min.js"></script>
+</head>
+<body>
+	<h1>Pagination test</h1>
+	<p><a href="http://esimakin.github.io/twbs-pagination/">http://esimakin.github.io/twbs-pagination/</a></p>
+
+	<p id="page-content">Page 1</p>
+
+	<ul id="pagination-demo" class="pagination-sm"></ul>
+
+	<script>
+		$('#pagination-demo').twbsPagination({
+	        totalPages: 9,
+	        visiblePages: 5,
+	        onPageClick: function (event, page) {
+	            $('#page-content').text('Page ' + page);
+	        }
+	    });
+	</script>
+</body>
+</html>
